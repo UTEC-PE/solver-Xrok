@@ -22,7 +22,7 @@ int main(int argc, char const *argv[]) {
     cout << "\nPress enter to continue ..."; 
     cin.get(); 
     return EXIT_SUCCESS;*/
-  string expresion = "(3+4)+12.1";
+  string expresion = "4-2+4^0.5";
   node* solito =build(expresion);
   cout<<solito->result()<<endl;
 }
