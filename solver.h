@@ -11,7 +11,7 @@ public:
 
     node() : left(nullptr), right(nullptr) {};
     node(node* left, node* right) : left(left), right(right){};
-    virtual float result() {};
+    virtual float result() {}; // No hay return, debió haber sido un virtual float result() = 0
 };
 
 //---------------------SUBCLASES-------------------------------------------
@@ -81,7 +81,7 @@ bool search(string equation, char element1, char element2, int &pos){
     pos=equation.length();
     return false;
 }
-string cut_parentesis(string equation) {
+string cut_parentesis(string equation) { // Que retorna si no entras al if?
     if (equation[0] == '(' && equation[equation.length() - 1] == ')')
         return equation.substr(1,equation.length()-2);
 }
